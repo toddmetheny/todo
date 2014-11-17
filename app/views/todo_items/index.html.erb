@@ -11,15 +11,17 @@
         </tr>
       </thead>
 
+
       <tbody>
         <% @todo_items.each do |todo_item| %>
           <tr>
-            <td><input type="checkbox" id="<%= @todo_item %>"></td>
+            <td><input type="checkbox" id="the_box"></td>
             <td><%= todo_item.description %></td>
             <td><%= todo_item.checkbox %></td>
             <td><%= link_to 'Show', todo_item %></td>
             <td><%= link_to 'Edit', edit_todo_item_path(todo_item) %></td>
             <td><%= link_to 'Destroy', todo_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
           </tr>
         <% end %>
       </tbody>
@@ -28,6 +30,8 @@
 
   <br>
   <div class="text-center">
-  <%= link_to 'New Todo item', new_todo_item_path %>
+    <a href="http://localhost:3000/todo_items/new" data-remote="true" id="new_link"><button type="button" class="btn btn-primary">New Item</button></a>
   </div>
 </div>
+
+

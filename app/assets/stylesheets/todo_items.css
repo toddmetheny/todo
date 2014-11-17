@@ -4,10 +4,12 @@
 */
 .list_title {
 	text-align: center;
+  text-transform: lowercase;
 }
  
 .table{
-	border: solid;
+	border-top: solid;
+  border-bottom: solid;
 	border-color: #d3d3d3;
 	border-width: 1px;
 }
@@ -18,6 +20,7 @@
  
 .table th {
 	text-align: center;
+  text-transform: lowercase;
 }
  
 .space {
@@ -44,7 +47,13 @@
 }
  
 .container{
-	width: 750px;
+	width: 780px;
 }
+
+.fa{
+  padding: 1px;
+}
+
+
 
 

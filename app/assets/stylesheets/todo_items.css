@@ -2,9 +2,41 @@
   Place all the styles related to the matching controller here.
   They will automatically be included in application.css.
 */
+
+body{
+  /*background-color: #fff; 
+  background-image: 
+  linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+  linear-gradient(#eee .1em, transparent .1em);
+  background-size: 100% 1.2em;*/
+
+  background:
+  radial-gradient(black 15%, transparent 16%) 0 0,
+  radial-gradient(black 15%, transparent 16%) 8px 8px,
+  radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+  radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+  background-color:#282828;
+  background-size:16px 16px;
+}
+
+#logo{
+  color: #fff;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+
+#modal-styles{
+  background-color: #fff;
+  width: 400px;
+  height: 250px;
+  border: 1px solid;
+}
+
 .list_title {
 	text-align: center;
   text-transform: lowercase;
+  padding: 10px;
 }
  
 .table{
@@ -12,6 +44,13 @@
   border-bottom: solid;
 	border-color: #d3d3d3;
 	border-width: 1px;
+  background-color: #fff;
+  /*background-image: url(snow.jpg);*/
+  /*background-color: #fff; 
+  background-image: 
+  linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+  linear-gradient(#eee .1em, transparent .1em);
+  background-size: 100% 1.2em;*/
 }
  
 .table td {
@@ -52,6 +91,22 @@
 
 .fa{
   padding: 1px;
+}
+
+a:hover{
+  color: #FF3399;
+}
+
+.actions{
+  padding: 5px;
+}
+
+.pencil{
+  color: #0066FF;
+}
+
+.trash{
+  color: #0066FF;
 }
 
 

@@ -3,32 +3,39 @@
 
 
 $(document).ready(function(){
-  // $(".checkbox").change(function(){
-  //   if(this.checked){
-  //     $('#'+this.id).closest('tr').fadeOut()
-  //   }
-  // });
+  $(".checkbox").change(function(){
+    if(this.checked){
+      $('#'+this.id).closest('tr').fadeOut();
+      // $.ajax("http://localhost:3000/", {
+      // 	success: function{
+      // 		$(this).checkbox = true
+      // 	}
+      // });
+    }
+  });
 	$('tr').on('mouseenter', function(){
 		$(this).css({'background-color': '#66FF33', 'font-weight': 'bold'});
 	}).on('mouseleave', function(){
 		$(this).css({'background-color': '#fff', 'font-weight': 'normal'})
 	});
 
-	$("#the_box").on('click', function(){
-		if(this.checked){
-		  $(this).closest('tr').fadeOut();
-		}
+	// $("#the_box").on('click', function(){
+	// 	if(this.checked){
+	// 	  $(this).closest('tr').fadeOut();
+	// 	}
+	// })
+
+ 	var page = "/edit.html.erb"
+
+// 	$(".modal-dreaming").on('click', function(){
+// 		$(this).dialog({ modal: true })
+// 	})
+	$("#somediv").on("click", function(){
+		opendialog("http://localhost:3000/todo_items/edit");
 	})
-
-	var page = "/new.html.erb"
-
-	$(".modal-dreaming").on('click', function(){
-		$(this).dialog({ modal: true })
-	})
-
-	$("#somediv").click(function() {
-  		opendialog("http://localhost:3000/todo_items/new");
-});
+// 	$("#somediv").click(function() {
+//   		opendialog("http://localhost:3000/todo_items/edit");
+// });
 
 	function opendialog(page) {
 	  var $dialog = $('#somediv')

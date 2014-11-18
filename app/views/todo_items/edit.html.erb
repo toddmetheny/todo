@@ -1,6 +1,12 @@
-<h1>Editing todo_item</h1>
 
-<%= render 'form' %>
+<div class="col-md-4 col-md-offset-4 text-center" id="modal-styles">
+	<h1>edit item</h1>
 
-<%= link_to 'Show', @todo_item %> |
-<%= link_to 'Back', todo_items_path %>
+	<%= render 'form' %>
+	
+</div>
+<div class="row">
+	<div class="col-md-4 col-md-offset-4 text-center">
+		<%= link_to 'Close', todo_items_path %>
+	</div>
+</div>

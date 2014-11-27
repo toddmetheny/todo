@@ -14,6 +14,7 @@
   <div class="form-group">
     <%= f.label :description %><br>
     <%= f.text_field :description, class: 'form-control' %>
+    <%= f.select :state, options_for_select(TodoItem::STATE_OPTIONS) %>
   </div>
 
   <div class="actions" id="new_item">

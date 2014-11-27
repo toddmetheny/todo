@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141114163443) do
+ActiveRecord::Schema.define(version: 20141127212002) do
 
   create_table "todo_items", force: true do |t|
     t.string   "description"
     t.boolean  "checkbox"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "state", 	 default: 1
   end
 
 end

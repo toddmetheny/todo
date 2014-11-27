@@ -69,6 +69,6 @@ class TodoItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def todo_item_params
-      params.require(:todo_item).permit(:description, :checkbox)
+      params.require(:todo_item).permit(:description, :checkbox, :state)
     end
 end

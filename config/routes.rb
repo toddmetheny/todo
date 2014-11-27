@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
+  resources :lists
+
   resources :todo_items
+
+  resources :lists do
+    resources :todo_items
+  end
 
   root 'todo_items#index'
 

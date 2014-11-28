@@ -1,4 +1,5 @@
-<%= form_for(@todo_item) do |f| %>
+
+<%= form_for([@list, @todo_item]) do |f| %>
   <% if @todo_item.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@todo_item.errors.count, "error") %> prohibited this todo_item from being saved:</h2>
@@ -15,6 +16,7 @@
     <%= f.label :description %><br>
     <%= f.text_field :description, class: 'form-control' %>
     <%= f.select :state, options_for_select(TodoItem::STATE_OPTIONS) %>
+    <%= f.hidden_field :list_id, value: @list.id %>
   </div>
 
   <div class="actions" id="new_item">

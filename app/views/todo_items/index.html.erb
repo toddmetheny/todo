@@ -21,7 +21,7 @@
             <td><%= todo_item.description %></td>
             <td><%= todo_item.convert_state(todo_item.state) %></td>
             <td><%= link_to_modal '', edit_todo_item_path(todo_item), class: "fa fa-pencil-square-o fa-2x pencil" %></td>
-            <td><%= link_to '', todo_item, method: :delete, data: { confirm: 'Are you sure?' }, class: 'fa fa-trash fa-2x trash' %></td>
+            <td><%= link_to '', list_todo_item, method: :delete, data: { confirm: 'Are you sure?' }, class: 'fa fa-trash fa-2x trash' %></td>
           </tr>
         <% end %>
       <% end %>

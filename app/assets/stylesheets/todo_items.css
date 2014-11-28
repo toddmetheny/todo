@@ -117,9 +117,13 @@ a:hover{
   color: #0066FF;
 }
 
-/*#new_item:hover{
-  color: #66FF33;
-}*/
+.list-name{
+  color: #fff;
+  font-family: 'Roboto Condensed', sans-serif;
+
+}
+
+
 
 
 

@@ -4,10 +4,10 @@ Rails.application.routes.draw do
   # resources :todo_items
 
   resources :lists, except: [:show] do
-    resources :todo_items, only: [:index, :new, :create]
+    resources :todo_items, only: [:index, :new, :create, :edit]
   end
 
-  resources :todo_items, only: [:edit, :show, :update, :destroy]
+  resources :todo_items, only: [:show, :update, :destroy]
 
   root 'lists#index'
 

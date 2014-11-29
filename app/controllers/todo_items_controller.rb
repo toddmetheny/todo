@@ -20,6 +20,7 @@ class TodoItemsController < ApplicationController
 
   # GET /todo_items/1/edit
   def edit
+    @list = List.find(params[:list_id])
   end
 
   # POST /todo_items
@@ -41,6 +42,7 @@ class TodoItemsController < ApplicationController
   # PATCH/PUT /todo_items/1
   # PATCH/PUT /todo_items/1.json
   def update
+    @list = List.find(params[:list_id])
     respond_to do |format|
       if @todo_item.update(todo_item_params)
         format.html { redirect_to :back, notice: 'Todo item was successfully updated.' }

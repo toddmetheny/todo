@@ -1,0 +1,24 @@
+<%= form_for([@lists, @todo_item]) do |f| %>
+  <% if @todo_item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@todo_item.errors.count, "error") %> prohibited this todo_item from being saved:</h2>
+
+      <ul>
+      <% @todo_item.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :description %><br>
+    <%= f.text_field :description, class: 'form-control' %>
+    <%= f.select :state, options_for_select(TodoItem::STATE_OPTIONS) %>
+    <%= f.hidden_field :list_id, value: @list.id %>
+  </div>
+
+  <div class="actions" id="new_item">
+    <%= f.submit class: 'btn btn-primary' %>
+  </div>
+<% end %>

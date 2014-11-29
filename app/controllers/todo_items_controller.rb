@@ -16,6 +16,8 @@ class TodoItemsController < ApplicationController
   # GET /todo_items/new
   def new
     @todo_item = TodoItem.new
+    @list = List.find(params[:list_id])
+    
   end
 
   # GET /todo_items/1/edit
@@ -42,10 +44,10 @@ class TodoItemsController < ApplicationController
   # PATCH/PUT /todo_items/1
   # PATCH/PUT /todo_items/1.json
   def update
-    @list = List.find(params[:list_id])
+    # @list = List.find(params[:list_id])
     respond_to do |format|
       if @todo_item.update(todo_item_params)
-        format.html { redirect_to :back, notice: 'Todo item was successfully updated.' }
+        format.html { redirect_to list_todo_items_path(@todo_item.list_id), notice: 'Todo item was successfully updated.' }
         format.json { render :show, status: :ok, location: @todo_item }
       else
         format.html { render :edit }

@@ -16,6 +16,7 @@ gem 'coffee-rails', '~> 4.0.0'
 # gem 'therubyracer',  platforms: :ruby
 group :production do
 	gem 'pg'
+	gem 'rails_12factor'
 end
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

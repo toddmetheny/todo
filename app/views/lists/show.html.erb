@@ -14,6 +14,7 @@
           <th>
           <th>Description</th>
           <th>status</th>
+          <th>updated</th>
           <!-- <th>Checkbox</th> -->
           <th colspan="3"></th>
         </tr>
@@ -27,6 +28,7 @@
             <td><input type="checkbox" class="checkbox" id="<%= todo_item.id %>">  </td>
             <td><%= todo_item.description %></td>
             <td><%= todo_item.convert_state(todo_item.state) %></td>
+            <td><%= todo_item.updated_at %></td>
             <td><%= link_to '', edit_list_todo_item_path(todo_item.list, todo_item), class: "fa fa-pencil-square-o fa-2x pencil" %></td>
             <td><%= link_to '', todo_item, method: :delete, data: { confirm: 'Are you sure?' }, class: 'fa fa-trash fa-2x trash' %></td>
           </tr>

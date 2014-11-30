@@ -13,7 +13,7 @@
   <% end %>
 
   <div class="form-group">
-    <%= f.label :description %><br>
+    <%= f.label :description, class: "form-title" %><br>
     <%= f.text_field :description, class: 'form-control' %>
     <%= f.select :state, options_for_select(TodoItem::STATE_OPTIONS) %>
     <%= f.hidden_field :list_id, value: @list.id %>

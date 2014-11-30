@@ -3,7 +3,4 @@ class List < ActiveRecord::Base
 	belongs_to :user
 
 	accepts_nested_attributes_for :todo_items
-
-	def created_or_updated
-	end
 end

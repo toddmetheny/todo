@@ -40,13 +40,13 @@
 
   <br>
   <div class="text-center">
-  	<%= link_to 'New item', new_list_todo_item_path(@list) %>
-    <!-- <a href="http://localhost:3000/todo_items/new" data-remote="true" id="new_link"><button type="button" class="btn btn-lg btn-primary">New Item</button></a> -->
+  	<%= link_to 'New item', new_list_todo_item_path(@list), class: "btn btn-lg btn-primary" %>
   </div>
 </div>
 
 <!-- end todo index -->
 	
-
-<%= link_to 'Edit', edit_list_path(@list) %> |
-<%= link_to 'Back', lists_path %>
+<div class="text-center">
+  <%= link_to 'Edit', edit_list_path(@list) %> |
+  <%= link_to 'Back', lists_path %>
+</div>

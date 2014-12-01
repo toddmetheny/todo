@@ -139,6 +139,23 @@ a:hover{
   color: #fff;
 }
 
+h1{
+  color: #fff;
+}
+
+.all-lists{
+  background-color: #fff;
+  color: #000;
+}
+
+.list-name{
+  text-transform: lowercase;
+}
+
+.signin{
+  color: #fff;
+}
+
 
 
 

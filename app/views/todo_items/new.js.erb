@@ -1,30 +1,30 @@
-$('#new_link').hide().after('<%= j render("form") %>')
+$('#new_link').hide().after('<%= j render("form") %>');
 
-$('#new_todo_item').on('submit', function(e){
-	e.preventDefault();
-	//console.log($(this).serialize());
-	$.ajax({
-		type: 'POST',
-		url: 'http://localhost:3000/todo_items',
+// $('#new_todo_item').on('submit', function(e){
+// 	e.preventDefault();
+// 	//console.log($(this).serialize());
+// 	$.ajax({
+// 		type: 'POST',
+// 		url: 'http://localhost:3000/todo_items',
 
-		data: $(this).serialize(),
-		success: function(response){
-			//console.log('->', response);
-			// console.log($('tr').closest('#id'));
-			//var description = $(this).param('description');
-			//$('.table tr:last').after('<tr>description</tr>');
-			// $(this).load('http://localhost:3000/');
-			// $('.table').append(response)
-			location.reload();
+// 		data: $(this).serialize(),
+// 		success: function(response){
+// 			//console.log('->', response);
+// 			// console.log($('tr').closest('#id'));
+// 			//var description = $(this).param('description');
+// 			//$('.table tr:last').after('<tr>description</tr>');
+// 			// $(this).load('http://localhost:3000/');
+// 			// $('.table').append(response)
+// 			location.reload();
 
-			// $.get('http://localhost:3000/', )
-			//location.reload()
-		},
-		error: function(err){
-			console.log(err);
-		}
-	});
-});
+// 			// $.get('http://localhost:3000/', )
+// 			//location.reload()
+// 		},
+// 		error: function(err){
+// 			console.log(err);
+// 		}
+// 	});
+// });
 
 // on("click", function(){
 // 	$(this).toggle().after('<%= j render("form") %>')

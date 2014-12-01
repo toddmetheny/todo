@@ -22,6 +22,11 @@ body{
   font-family: 'Roboto Condensed', sans-serif;
 }
 
+a.twitter-button{
+  padding: 10px;
+  margin-top: 50px;
+}
+
 
 #modal-styles{
   background-color: #fff;

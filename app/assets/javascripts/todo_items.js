@@ -25,23 +25,56 @@ $(document).ready(function(){
 	// 	}
 	// })
 
- 	var page = "/edit.html.erb"
+ 	// var page = "/edit.html.erb"
 
 // 	$(".modal-dreaming").on('click', function(){
 // 		$(this).dialog({ modal: true })
 // 	})
-	$("#somediv").on("click", function(){
-		opendialog("http://localhost:3000/todo_items/edit");
-	});
+	// $("#somediv").on("click", function(){
+	// 	opendialog("#{edit_list_todo_item_path}");
+	// })
 // 	$("#somediv").click(function() {
 //   		opendialog("http://localhost:3000/todo_items/edit");
 // });
-	$("#notice").hide(5000, function(){
+
+	
+
+	// function opendialog(page) {
+	//   var $dialog = $('#somediv')
+	//   .html('<iframe style="border: 0px; " src="' + page + '" width="100%" height="100%"></iframe>')
+	//   .dialog({
+	//     title: "Page",
+	//     autoOpen: false,
+	//     dialogClass: 'dialog_fixed,ui-widget-header',
+	//     modal: true,
+	//     height: 500,
+	//     minWidth: 400,
+	//     minHeight: 400,
+	//     draggable:true,
+	//     /*close: function () { $(this).remove(); },*/
+	//     buttons: { "Ok": function () {         $(this).dialog("close"); } }
+	//   });
+	//   $dialog.dialog('open');
+	// }
+
+	$("#notice").fadeOut(4000, function(){
 		$(this).remove();
 	});
 
-	// $('#myModal').on("click", function(){
-	// 	$(this).modal('show');
+
+	// $("#new_todo_item > div.actions > input").on("click", function(){
+	// 	console.log($(this))
+	// 	var valuesToSubmit = $(this).serialize();
+	// 	$.post({
+	// 		url: $(this).attr('action'),
+	// 		data: valuesToSubmit,
+	// 		dataType: "JSON"
+	// 	}).success(function(json){
+	// 		$("table").append(data);
+	// 	});
+	// 	return false;
 	// });
+	
+
 });
 

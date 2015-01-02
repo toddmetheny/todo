@@ -1,7 +1,7 @@
 several things not working in production...but this app is deployed at:
+https://hidden-depths-3239.herokuapp.com/
 
 1. javascript elements not working properly in prod
 2. lots of styling things not working in prod
 3. code not DRY at all...have duplicative code in the todo index file and the list show file. I need to just render a partial in both of those places
 
-https://hidden-depths-3239.herokuapp.com/

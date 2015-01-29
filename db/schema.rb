@@ -17,11 +17,9 @@ ActiveRecord::Schema.define(version: 20141129183458) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "list_id"
     t.integer  "user_id"
   end
 
-  add_index "lists", ["list_id"], name: "index_lists_on_list_id"
   add_index "lists", ["user_id"], name: "index_lists_on_user_id"
 
   create_table "todo_items", force: true do |t|
@@ -29,13 +27,11 @@ ActiveRecord::Schema.define(version: 20141129183458) do
     t.boolean  "checkbox"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "state",        default: 1
-    t.integer  "todo_item_id"
+    t.integer  "state",       default: 1
     t.integer  "list_id"
   end
 
   add_index "todo_items", ["list_id"], name: "index_todo_items_on_list_id"
-  add_index "todo_items", ["todo_item_id"], name: "index_todo_items_on_todo_item_id"
 
   create_table "users", force: true do |t|
     t.string   "provider"
@@ -44,4 +40,5 @@ ActiveRecord::Schema.define(version: 20141129183458) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
 end
